@@ -8,12 +8,13 @@ import androidx.room.PrimaryKey;
 public class Todo {
 
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
     public int id;
 
     @ColumnInfo(name = "_task")
     public String task;
 
-    @ColumnInfo(name = "_completed")
+    @ColumnInfo(name = "completed")
     public boolean completed;
 
     public Todo(String task, boolean completed) {
